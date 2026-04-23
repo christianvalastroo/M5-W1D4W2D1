@@ -1,16 +1,99 @@
-# React + Vite
+# 📚 EpiBooks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Piccola applicazione realizzata con **React + Vite** per mostrare un catalogo di libri attraverso componenti riutilizzabili e uno stile basato su **React-Bootstrap**.
 
-Currently, two official plugins are available:
+## ✨ Cosa ho realizzato
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Una **navbar** con il nome del progetto e i link principali
+- Un componente **Welcome** con messaggio di benvenuto
+- Un componente **AllTheBooks** che mostra una lista di libri in griglia
+- Un componente **SingleBook** per visualizzare ogni libro come card
+- Un **footer** semplice e coerente con il layout
+- L'integrazione dei dati dei libri da file **JSON**
 
-## React Compiler
+## 🧩 Struttura del progetto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```text
+src/
+├── books/
+│   ├── fantasy.json
+│   ├── history.json
+│   ├── horror.json
+│   ├── romance.json
+│   └── scifi.json
+├── components/
+│   ├── AllTheBooks/
+│   ├── MyFooter.jsx/
+│   ├── MyNav.jsx/
+│   ├── SingleBook/
+│   └── Welcome/
+├── App.jsx
+├── index.css
+└── main.jsx
+```
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologie usate
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React**
+- **Vite**
+- **Bootstrap**
+- **React-Bootstrap**
+- **JavaScript**
+- **JSON**
+
+## 📖 Componenti principali
+
+### `MyNav`
+Gestisce la barra di navigazione superiore con brand e link.
+
+### `Welcome`
+Mostra un alert di benvenuto all'utente.
+
+### `AllTheBooks`
+Importa i libri dal file `fantasy.json` e li renderizza in una griglia responsive.
+
+### `SingleBook`
+Riceve un libro tramite `props` e mostra:
+
+- copertina
+- titolo
+- prezzo
+
+### `MyFooter`
+Mostra il footer finale della pagina.
+
+## 🚀 Come avviare il progetto
+
+```bash
+npm install
+npm run dev
+```
+
+Poi apri il progetto nel browser all'indirizzo mostrato da Vite.
+
+## 📦 Comandi utili
+
+```bash
+npm run dev
+npm run build
+npm run preview
+```
+
+## 🎯 Obiettivo del progetto
+
+L'obiettivo è costruire una piccola interfaccia React suddivisa in componenti, imparando a:
+
+- organizzare il codice in modo modulare
+- passare dati tramite `props`
+- usare file JSON come sorgente dati
+- creare layout responsive con React-Bootstrap
+
+## 🔍 Stato attuale
+
+Al momento l'app:
+
+- mostra la navbar
+- visualizza il messaggio di benvenuto
+- stampa i libri fantasy in una griglia
+- mostra il footer in fondo alla pagina
+
