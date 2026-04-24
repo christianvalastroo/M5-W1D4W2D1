@@ -1,12 +1,13 @@
-import { Card } from "react-bootstrap"
+import Card from 'react-bootstrap/Card';
 
 const SingleBook = (props) => {
     return (
-        <Card className="h-100">
-            <Card.Img variant="top" src={props.book.img} />
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={props.img} />
+
             <Card.Body>
-                <Card.Title>{props.book.title}</Card.Title>
-                <Card.Text>{props.book.price} €</Card.Text>
+                <Card.Title>{props.title}</Card.Title>
+                <Card.Text>{props.price} €</Card.Text>
             </Card.Body>
         </Card>
     )

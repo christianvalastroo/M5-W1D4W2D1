@@ -4,7 +4,7 @@ const MyNav = () => {
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand>EpiBooks</Navbar.Brand>
+                <Navbar.Brand href="/">EpiBooks</Navbar.Brand>
                 <Nav>
                     <Nav.Link href="#">Home</Nav.Link>
                     <Nav.Link href="#">About</Nav.Link>

@@ -6,11 +6,17 @@ const AllTheBooks = () => {
     return (
         <Container>
             <Row>
+
                 {fantasy.map((book) => (
-                    <Col md={3} className="mb-4" key={book.asin}>
-                        <SingleBook book={book} />
+                    <Col md={3} key={book.asin}>
+                        <SingleBook
+                            img={book.img}
+                            title={book.title}
+                            price={book.price}
+                        />
                     </Col>
                 ))}
+
             </Row>
         </Container>
     )
