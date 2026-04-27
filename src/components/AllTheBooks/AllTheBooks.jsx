@@ -5,7 +5,7 @@ import SingleBook from "../SingleBook/SingleBook"
 const AllTheBooks = () => {
     return (
         <Container>
-            <Row>
+            <Row className="g-4">
 
                 {fantasy.map((book) => (
                     <Col md={3} key={book.asin}>
