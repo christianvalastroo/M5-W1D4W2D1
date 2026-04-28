@@ -3,15 +3,18 @@ import MyNav from "./components/MyNav.jsx/MyNav"
 import Welcome from "./components/Welcome/Welcome"
 import AllTheBooks from "./components/AllTheBooks/AllTheBooks"
 import MyFooter from "./components/MyFooter.jsx/MyFooter"
+import "./App.css"
 
 const App = () => {
   return (
-    <div>
+    <div className="app-wrapper">
       <MyNav />
 
-      <Welcome />
+      <main className="main-content">
+        <Welcome />
 
-      <AllTheBooks />
+        <AllTheBooks />
+      </main>
 
       <MyFooter />
     </div>
