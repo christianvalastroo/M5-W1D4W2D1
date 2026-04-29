@@ -1,13 +1,24 @@
 import Card from 'react-bootstrap/Card';
+import { useState } from 'react';
+import './SingleBook.css';
 
 const SingleBook = (props) => {
-    return (
-        <Card style={{ width: 'h-100' }}>
-            <Card.Img variant="top" src={props.img} />
 
-            <Card.Body>
-                <Card.Title>{props.title}</Card.Title>
-                <Card.Text>{props.price} €</Card.Text>
+    const [selected, setSelected] = useState(false)
+
+    return (
+        <Card
+            className={`book-card ${selected ? "selected" : ""}`}
+        >
+            <Card.Img
+                className="book-img"
+                variant="top" src={props.img}
+                onClick={() => setSelected(!selected)}
+            />
+
+            <Card.Body className="book-body">
+                <Card.Title className="book-title">{props.title}</Card.Title>
+                <Card.Text className="book-price">{props.price} €</Card.Text>
             </Card.Body>
         </Card>
     )
