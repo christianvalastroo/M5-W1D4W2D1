@@ -2,6 +2,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import fantasy from "../../books/fantasy.json"
 import SingleBook from "../SingleBook/SingleBook"
 import { useState } from "react"
+import Alert from 'react-bootstrap/Alert';
 
 const AllTheBooks = () => {
 
@@ -38,7 +39,11 @@ const AllTheBooks = () => {
 
                 ) : (
 
-                    <p className="text-center fs-4">Nessun libro trovato</p>
+                    <Col className="text-center">
+                        <Alert variant="danger">
+                            Nessun libro trovato per "{search}" 😢
+                        </Alert>
+                    </Col>
 
                 )}
 
